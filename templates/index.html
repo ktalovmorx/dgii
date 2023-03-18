@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+
+    </title>
+
+    <style>
+        @charset "utf-8";
+
+        /*@media screen and (max-width: 1020px) {*/
+        #container,
+        #header,
+        #content,
+        #footer {
+            float: none;
+            width: auto;
+        }
+
+        p {
+            font-size: 2em;
+        }
+
+        #header {
+            background-color: #7daf18;
+            padding: 5%;
+            border-bottom: 1em solid #2d2d2d;
+        }
+
+        #title {
+            padding: 5%;
+        }
+
+        .title-orange {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3em;
+            color: #de9900;
+            display: block;
+            font-weight: bold;
+        }
+
+        .title-green {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 4em;
+            color: #4b8101;
+            display: block;
+        }
+
+        #content {
+            padding: 0 5% 5% 5%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3em;
+        }
+
+        .data_table {
+            /*	border-collapse:collapse;
+	border-spacing:3%;	*/
+        }
+
+        .data_table td {
+            padding: 0.8em;
+            border-bottom: 1px solid #cfcfcf;
+        }
+
+        .data_table td.left-col {
+            background-color: #f1f1f1;
+            color: #000;
+            width: 38%;
+        }
+
+        .data_table td.right-col {
+            background-color: #fff;
+            color: #676767;
+            width: 58%;
+        }
+
+        #footer {
+            padding: 5%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.5em;
+            background-color: #cfcfcf;
+            color: #3a3a3a;
+        }
+
+        /*}*/
+    </style>
+</head>
+
+<body>
+    <div id="mainContainer">
+        <div id="header">
+            <img src="https://dgiigovdo.com/static/images/LogoPlacaProvisional.gif" height="49" alt="Placa Provisional" />
+        </div>
+        <div id="title">
+            <span class="title-orange">Sistema Datamatrix</span> <span class="title-green">Validación
+                de Documentos</span>
+        </div>
+        <div id="content">
+            <table width="100%" border="0" cellpadding="5" cellspacing="0" class="data_table">
+                <tr>
+                    <td class="left-col">
+                        <span id="lblECodigo">Código</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="lblCodigo">{{lblCodigo}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-col">
+                        <span id="lblEPlaca">Placa</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="lblPlaca">{{lblPlaca}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-col">
+                        <span id="lblETipoVehiculo">Tipo de Vehículo</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="lblTipoVehiculo">{{lblTipoVehiculo}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-col">
+                        <span id="lblEMarca">Marca</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="lblMarca">{{lblMarca}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-col">
+                        <span id="lblEModelo">Modelo</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="lblModelo">{{lblModelo}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-col">
+                        <span id="lblEColor">Color</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="lblColor">{{lblColor}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-col">
+                        <span id="lblEYear">Año</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="lblYear">{{lblYear}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-col">
+                        <span id="lblEChasis">Chasis</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="lblChasis">{{lblChasis}}</span>
+                    </td>
+                </tr>
+                <tr id="trfechaemision">
+                    <td class="left-col">
+                        <span id="LblEfechaemision">Fecha Emisión</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="Lblfechaemision">{{Lblfechaemision}}</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="left-col">
+                        <span id="LblEFechaexpiracion">Fecha Expiración</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="LblFechaexpiracion">{{LblFechaexpiracion}}</span>
+                    </td>
+                </tr>
+                <tr id="trNombreImportador">
+                    <td class="left-col">
+                        <span id="LblENombreImportador">Razón Social / Nombre Importador</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="LblNombreImportador">{{LblNombreImportador}}</span>
+                    </td>
+                </tr>
+
+                <tr id="trRnCedulaImportador">
+                    <td class="left-col">
+                        <span id="LblERnCedulaImportador">Rnc/Cédula Importador</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="LblRnCedulaImportador">{{LblRnCedulaImportador}}</span>
+                    </td>
+                </tr>
+
+                <tr id="trNombreComprador">
+                    <td class="left-col">
+                        <span id="LblENombreComprador">Razón Social / Nombre Comprador</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="LblNombreComprador">{{LblNombreComprador}}</span>
+                    </td>
+                </tr>
+
+                <tr id="trRnCedulaComprador">
+                    <td class="left-col">
+                        <span id="LblERnCedulaComprador">Rnc/Cédula Comprador</span>
+                    </td>
+                    <td class="right-col">
+                        <span id="LblRnCedulaComprador">{{LblRnCedulaComprador}}</span>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <div id="footer">
+            Direccion General de Impuestos Internos.
+        </div>
+    </div>
+</body>
+
+</html>
